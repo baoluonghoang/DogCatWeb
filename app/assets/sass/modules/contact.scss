@@ -1,0 +1,114 @@
+@import "../partials/color";
+@import "../partials/common.scss";
+@import "../partials/font";
+
+#contact-title {
+    @include section;
+    background-image: url("../../assets/images/main_image/banner_contact.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    min-height: 573px;
+    margin-top: -18px;
+    .contact__inner {
+        @include block-inner;
+        @include flex;
+        transform: translateY(100px);
+
+        .contact-card {
+            display: block;
+            width: 267px;
+
+            @include flex-column;
+            align-items: center;
+
+            line-height: 71px;
+            padding-top: 62px;
+
+            .contact-img-card {
+                width: 75px;
+                height: 88px;
+
+                .img-contact {
+                    border-radius: 5px;
+                    color: $text;
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+                .img-contact:nth-child(2) {
+                    color: red;
+                }
+            }
+            .phone-card {
+                color: $text;
+                text-align: center;
+
+                .contact-text-heading {
+                    font-size: 42px;
+                    font-weight: $font-medium;
+                    transform: translate(3px, 14px);
+                }
+
+                .phone-contact {
+                    font-size: 38px;
+                    font-weight: $font-heading;
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+/*fix img contact*/
+.fix-client {
+    margin-left: -13px;
+}
+.contact-img-card1 {
+    width: 102px;
+    transform: translateX(-1px);
+}
+
+.contact-img-card2 {
+    width: 75px;
+    transform: translateX(3px);
+}
+
+.contact-img-card3 {
+    width: 78px;
+}
+
+@media only screen and (max-width: 426px) {
+    #contact-title .contact__inner .contact-card .phone-card .phone-contact {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #contact-title .contact__inner {
+        padding: 0 2rem;
+        flex-wrap: wrap;
+        
+        .contact-card {
+            padding: 0;
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 6px solid #ffffff;
+            padding-top: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    #contact-title {
+        height: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #contact-title .contact__inner {
+        flex-wrap: wrap;
+    }
+}

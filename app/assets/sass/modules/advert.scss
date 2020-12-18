@@ -1,0 +1,317 @@
+@import "../partials/color";
+@import "../partials/common.scss";
+@import "../partials/font";
+
+#advert {
+    position: relative;
+    background: $text;
+    height: 792px;
+    font-family: "Poppins";
+    @include flex;
+
+    .block__inner {
+        @include flex;
+        @include block-inner;
+        overflow: hidden;
+        max-width: 1159px;
+
+        .advert__description {
+            overflow: hidden;
+            width: 659px;
+            padding: 0;
+            margin-top: -40px;
+
+            .advert__title {
+                display: block;
+                transform: translate(1px, 30px);
+                overflow: hidden;
+
+                .advertise-title {
+                    letter-spacing: 0.6px;
+                    font-size: 50px;
+                    color: $text-next;
+                    line-height: 59px;
+                    font-weight: $font-semiBold;
+                    transform: translate(-2px, 6px);
+                }
+
+                .lover {
+                    letter-spacing: 0.38px;
+                }
+            }
+
+            .advert__text {
+                overflow: hidden;
+                display: block;
+                padding: 56px 0;
+
+                .advertise-txt {
+                    transform: translate(0px, 15px);
+                    line-height: 35.9px;
+                    font-size: 29px;
+                    letter-spacing: 0.3px;
+                    color: $text-next;
+                    font-weight: $font-regular;
+                }
+            }
+
+            .advert__button {
+                display: block;
+
+                .btn-advert {
+                    border: none;
+                    background-color: $background;
+                    padding: 19px 32px;
+                    border-radius: 5px;
+                    transform: translateX(-0.5px);
+
+                    .advert-a {
+                        text-decoration: none;
+                        font-size: 21px;
+                        color: $text;
+                        font-weight: $font-semiBold;
+                    }
+
+                    &:hover {
+                        background-color: $background-button;
+                        transition: 0.5s all ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .advert__img {
+            position: relative;
+            width: 505px;
+            height: 600px;
+            top: -16px;
+            left: -3px;
+
+            .img-dog {
+                position: absolute;
+                z-index: 2;
+                width: 252px;
+                height: 206px;
+                background-color: $background;
+
+                top: 367px;
+                left: -39px;
+            }
+
+            .video-dog {
+                position: absolute;
+                z-index: 3;
+                top: 59px;
+            }
+        }
+    }
+}
+
+/*advert-description*/
+
+.advert__img {
+    .doggy {
+        position: absolute;
+        width: 252px;
+        height: 206px;
+        background-color: $background;
+
+        top: 366px;
+        left: 296px;
+    }
+
+    .video-doggy {
+        left: 4px;
+    }
+}
+
+.more-advert {
+    height: 600px;
+    text-align: right;
+    position: relative;
+    transform: translate(4px, 95px);
+
+    .more-title {
+        padding-bottom: 12px;
+
+        .more-advertise {
+            letter-spacing: 0.5px;
+        }
+
+        .txt-title {
+            transform: translate(-4px, 11px);
+            font-size: 50px;
+            letter-spacing: 0.4px;
+            color: $text-next;
+            font-weight: $font-semiBold;
+        }
+    }
+
+    .more-text {
+        transform: translate(-7px, -3px);
+        .advertise-txt {
+            .fix-more {
+                position: absolute;
+                right: -7px;
+            }
+        }
+    }
+
+    .more-button {
+        transform: translate(-4px, 33px);
+        z-index: 9999;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .doggy {
+        transform: translateX(-50px);
+    }
+
+    .video-dog iframe {
+        margin-top: 200px;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    #advert .block__inner {
+        padding: 0 1rem;
+        .advert__img {
+            .video-doggy {
+                transform: translateY(-200px);
+            }
+            
+            .img-dog {
+                transform: translateY(28px);
+            }
+        }
+
+        .advert__description{
+            .advert__title {
+                .advertise-title {
+                    font-size: 20px;
+                }
+            }
+
+            .advert__text .advertise-txt {
+                font-size: 20px;
+            }
+        
+            .advert__button {
+                transform: translateY(10px);
+            }
+        }
+        }
+    }
+
+@media only screen and (max-width: 376px) {
+    #advert .block__inner .advert__description {
+        width: 355px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .img-dog {
+        transform: translateY(-139px);
+    }
+
+    .video-dog iframe {
+        width: 325px;
+        height: 325px;
+    }
+     
+    .doggy {
+        transform: translate(-195px, -153px);
+    }
+
+    .more-advert {
+        height: 750px;
+    }
+
+    #advert .block__inner {
+        width: 350px;
+
+        .advert__img {
+            margin: 0;
+            padding: 0;
+            width: 375px;
+            transform: translateY(130px);
+        }
+
+        .advert__description {
+            margin: 0;
+            max-width: 375px;
+            margin-top: -200px;
+
+            .advert__title .advertise-title {
+                font-size: 30px;
+            }
+
+            .advert__text .advertise-txt {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    #advert .block__inner .advert__description {
+        text-align: center;
+
+        .advert__title .advertise-title {
+            font-size: 31px;
+        }
+
+        .advert__text .advertise-txt {
+            font-size: 22px;
+        }
+    
+        .advert__button .btn-advert .advert-a {
+            font-size: 18px;
+        }
+    }
+    .more-advert .more-title .txt-title {
+        font-size: 31px;
+    }
+
+    .more-advert .more-text {
+        .advertise-txt .fix-more {
+            position: relative;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #advert .block__inner .advert__description .advert__button {
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #advert {
+        height: 1100px;
+
+        .block__inner {
+            flex-wrap: wrap-reverse;
+
+            .advert__description {
+                margin: 0 auto;
+                transform: translateY(50px);
+
+                .advert__button {
+                    margin-bottom: 130px;
+                }
+            }
+        }
+    }
+
+    .advert__img {
+        margin: 0 auto;
+        margin-top: 130px;
+    }
+
+    #advert .block__more {
+        flex-wrap: wrap;
+        z-index: 1;
+    }
+}

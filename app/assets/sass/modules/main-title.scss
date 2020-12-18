@@ -1,0 +1,175 @@
+@import '../partials/color';
+@import '../partials/common.scss';
+@import '../partials/font';
+
+
+#main-title {
+    @include section;
+    height: auto;
+    background: $background;
+    padding: 96px 0;
+
+    .block__inner {
+        @include block-inner;
+
+        .main__description {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: $text;
+
+            .main__title {   
+                .main-title {
+                    letter-spacing: 4px;
+                    margin-left: 8px;
+                    font-size: 70px;
+                    font-weight: $font-heading;
+                    padding-top: 5px;
+                }
+
+                .main-heading  {
+                    padding: 37px 0 92px;
+
+                    .text-title {
+                        font-size: 33px;
+                        font-weight: $font-regular;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            .main__card {
+                @include flex;
+
+                .card {
+                    display: block;
+                    width: 341px;
+                    .img-card {
+                        width: 100%;
+                        .img-doctor {
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .text-card {
+                        .text-heading {
+                            font-size: 36px;
+                            font-weight: 600;
+                            padding: 46px 0;
+                            letter-spacing: 1.1px;
+                        }
+
+                        .text-note {
+                            font-size: 25px;
+                            font-weight: $font-regular;
+                            line-height: 30px;
+                            margin-top: -28px;
+                            letter-spacing: 0.2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*sub-title*/
+
+.text-card {
+    .money-card{
+        padding: 35px 36px 27px;
+        color: $text;
+        font-size: 42px;
+        font-weight: $font-semiBold;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .price-heading {
+            text-decoration-line: line-through;
+        }
+    
+        .price-money {
+            text-decoration: none;
+        }
+    }
+
+    .buy-now {
+        font-size: 25px;
+        background: $background-button;
+        width: 199px;
+        height: 60px;
+        border-radius: 30px;
+        @include input-button;
+
+        &:hover {
+            cursor: pointer;
+            color: #ffffff;
+            transition: 0.5s all ease-in-out;
+        }
+    }
+}
+
+#main-title {
+    .sub__inner {
+        padding-top: 20px;
+        transform: translateY(-13px);
+    }
+}
+
+
+/*------------------responsive------------------*/
+
+@media only screen and (max-width: 426px) {
+    #main-title .block__inner .main__description .main__title .main-heading .text-title {
+        font-size: 25px;
+    }
+
+    .text-card .money-card {
+        font-size: 28px;
+    }
+
+    .text-card .buy-now {
+        font-size: 25px;
+        width: 150px;
+    }
+
+} 
+
+@media only screen and (max-width: 768px) {
+    #main-title .block__inner {
+        padding: 0 2rem;
+
+        .main__description {
+
+            .main__title {
+                
+                .main-title {
+                    font-size: 31px;
+                }
+            
+                .main-heading {
+                    font-size: 22px;
+                }
+            }
+
+            .main__card{
+                flex-wrap: wrap;
+                margin: 0 auto;
+
+                .card {
+                width: 100%;
+                padding-bottom: 20px;
+                }
+            } 
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #main-title .block__inner .main__description .main__card{
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,60 @@
+@import './color';
+@import './font';
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin block-inner {
+    margin: 0 auto;
+    max-width: 1159px;
+    position: relative;
+}
+
+@mixin flex-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin a-banner {
+    text-decoration: none;
+    font-size: 21px;
+    letter-spacing: 0px;
+    color: $text;
+    font-weight: $font-semiBold;
+}
+
+@mixin section {
+    position: relative;
+    height: auto;
+    font-family: "Poppins";
+}
+
+/*footer*/
+@mixin a-footer {
+    font-size: 25px;
+    line-height: 44px;
+    font-weight: $font-regular;
+}
+
+@mixin heading-footer {
+    font-size: 38px;
+    font-weight: $font-semiBold;
+    line-height: 26px;
+}
+
+@mixin input-button {
+    margin:0;
+    border:none;
+    outline: none;
+}

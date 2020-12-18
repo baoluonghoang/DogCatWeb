@@ -1,0 +1,150 @@
+@import '../partials/color';
+@import '../partials/common.scss';
+@import '../partials/font';
+
+
+#recent-post{
+    position: relative;
+    background: $text;
+    max-height: auto;
+    font-family: "Poppins";
+    padding: 126px 0;
+
+
+    .block__inner {
+        @include block-inner;
+
+        .post__description {
+            @include flex-column;
+
+            color: $text-head;
+
+            .main__title {   
+                .post-title {
+                    letter-spacing: 2px;
+                    margin-left: -3px;
+                    font-size: 75px;
+                    font-weight: $font-heading;
+                    padding-top: 4px;
+                }
+
+                .doctor-heading  {
+                    padding: 34px 0 92px;
+
+                    .text-title {
+                        font-size: 33px;
+                        font-weight: $font-regular;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            .recent__card {
+                @include flex;
+                .doctor-card {
+                    display: block;
+                    width: 360px;
+                    .img-card {
+                        width: 100%;
+                        .img-doctor {
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .post-card {
+                        padding: 30px;
+                        text-align: left;
+                        height: auto;
+
+                        .tit-doctor {
+                            display: block;
+                            font-size: 25px;
+                            font-weight: $font-semiBold;
+                            letter-spacing: 0.4px;
+                            padding: 0px 1px;
+                            line-height: 28px;
+                        }
+
+                        .date-doctor {
+                            display: block;
+                            font-size: 17px;
+                            color: $background-button;
+                            font-weight: $font-regular;
+                            padding: 8px 0;
+                            line-height: 28px;
+                        }
+
+                        .txt-doc {
+                            display: block;
+                            font-size: 17px;
+                            font-weight: $font-regular;
+
+                            letter-spacing: -0.24px;
+                            padding: 11px 0;
+                            line-height: 20px;
+                        }
+
+                        .read-more {
+                            display: block;
+                            font-size: 21px;
+                            color: $background-button;
+                            font-weight: $font-medium;
+                            padding: 14px 0px;
+
+                            &:hover {
+                                cursor: pointer;
+                                color: $background;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------responsive------------------*/
+@media only screen and (max-width: 321px) {
+    #recent-post .block__inner .post__description .main__title .doctor-heading .text-title {
+        font-size: 22px;
+    }
+
+} 
+
+@media only screen and (max-width: 768px) {
+    #recent-post .block__inner{
+        padding: 0 2rem;
+
+        .post__description {
+
+            .main__title {
+                .post-title {
+                    font-size: 38px;
+                }
+
+                .doctor-headin{
+                    .text-title {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            .recent__card {
+                flex-wrap: wrap;
+                margin: 0 auto;
+
+                .doctor-card {
+                    width: 100%;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #recent-post .block__inner .post__description .recent__card{
+        flex-wrap: wrap;
+    }
+}
