@@ -102,6 +102,7 @@
                 position: absolute;
                 z-index: 3;
                 top: 59px;
+                cursor: pointer;
             }
         }
     }
@@ -121,6 +122,7 @@
     }
 
     .video-doggy {
+        cursor: pointer;
         left: 4px;
     }
 }
@@ -162,31 +164,16 @@
         z-index: 9999;
     }
 }
+/*------------responsive----------------*/
 
 @media only screen and (max-width: 321px) {
     .doggy {
         transform: translateX(-50px);
     }
 
-    .video-dog iframe {
-        margin-top: 200px;
-        max-width: 300px;
-        max-height: 300px;
-    }
-
     #advert .block__inner {
-        padding: 0 1rem;
-        .advert__img {
-            .video-doggy {
-                transform: translateY(-200px);
-            }
-            
-            .img-dog {
-                transform: translateY(28px);
-            }
-        }
-
         .advert__description{
+            transform: translateY(-80px);
             .advert__title {
                 .advertise-title {
                     font-size: 20px;
@@ -204,24 +191,29 @@
         }
     }
 
-@media only screen and (max-width: 376px) {
-    #advert .block__inner .advert__description {
-        width: 355px;
+
+@media only screen and (max-width: 360px) { 
+    .video-dog iframe {
+        max-width: 300px;
     }
 }
-
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 475px) {
     .img-dog {
-        transform: translateY(-139px);
+        transform: translateY(-120px);
     }
 
     .video-dog iframe {
-        width: 325px;
+        width: 360px;
         height: 325px;
+        margin-top: 80px;
+    }
+
+    .video-doggy iframe {
+        transform: translateY(100px);
     }
      
     .doggy {
-        transform: translate(-195px, -153px);
+        transform: translateX(-195px);
     }
 
     .more-advert {
@@ -230,16 +222,7 @@
 
     #advert .block__inner {
         width: 350px;
-
-        .advert__img {
-            margin: 0;
-            padding: 0;
-            width: 375px;
-            transform: translateY(130px);
-        }
-
         .advert__description {
-            margin: 0;
             max-width: 375px;
             margin-top: -200px;
 
@@ -250,6 +233,26 @@
             .advert__text .advertise-txt {
                 font-size: 20px;
             }
+        }
+
+        .advert__img {
+            top: 30px;
+        }
+
+        .more__advert {
+            top: -20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #advert .block__inner .advert__img {
+        display: flex;
+        justify-content: center;
+
+        .video-dog iframe{
+            margin-top: 20px;
+            width: 450px;
         }
     }
 }
@@ -293,13 +296,13 @@
 
         .block__inner {
             flex-wrap: wrap-reverse;
-
+            
             .advert__description {
                 margin: 0 auto;
-                transform: translateY(50px);
+                transform: translateY(-30px);
 
                 .advert__button {
-                    margin-bottom: 130px;
+                    margin-bottom: 220px;
                 }
             }
         }

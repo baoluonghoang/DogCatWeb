@@ -9,31 +9,40 @@
     
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>  
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Dog Shop</title>
 </head>
 <body>
     <header id="header">
-    <div class="block__inner container">
+    <div class="block__inner navbar container">
         <div class="header__logo">
-            <img src="../assets/images/logo/logo.png" alt="logo" class="logo__image" />
+            <a href="/"><img src="../assets/images/logo/logo.png" alt="logo" class="logo__image" /></a>
         </div>
-        <div class="close">
-            <i class="bx bx-x"></i>
-        </div>
-        <div class="header__menu" id="header__responsive">
-            <a href="#" class="header-a" id="head1">Home</a>
-            <a href="#" class="header-a" id="head2">About</a>
-            <a href="#" class="header-a" id="head3">Service</a>
-            <a href="#" class="header-a" id="head4">Contact</a>
-            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a> -->
-        </div>
-        <div class="mini-menu">
-            <i class="bx bx-menu"></i>
+        <div class="menu">
+            <div class="top-nav">
+                <div class="logo">
+                    <img src="../assets/images/logo/logo.png" alt="logo" class="logo__image" />
+                </div>
+                <div class="close" onclick="menuClose()">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+            <div class="header__menu" id="header__responsive">
+                <a href="#" class="header-a" id="head1">Home</a>
+                <a href="#" class="header-a" id="head2">About</a>
+                <a href="#" class="header-a" id="head3">Service</a>
+                <a href="#" class="header-a" id="head4">Contact</a>
+                <div class="header__button search-responsive">
+                    <div class="form-search">
+                        <input type="text" class="input-search" name="search" placeholder="Search..">
+                    </div>
+                    <div class="button-search">
+                        <button class="btn-search"></button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="header__button">
             <div class="form-search">
@@ -42,6 +51,9 @@
             <div class="button-search">
                 <button class="btn-search"></button>
             </div>
+        </div>
+        <div class="mini-menu" onclick="menuOpen()">
+            <i class="bx bx-menu"></i>
         </div>
     </div>
 </header>
@@ -150,7 +162,7 @@
 </section>
     <section id="advert">
     <div class="block__inner block__more container">
-        <div class="advert__img">
+        <div class="advert__img more__advert">
             <div class="doggy"></div>
             <div class="video-dog video-doggy">
                 <iframe width="505" height="478" src="https://www.youtube.com/embed/dVJizChLUO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -250,10 +262,10 @@
                         <h1 class="doctor-text-heading">Jennifer Mullen</h1>
                         <p class="text-note">VETERINARY</p>
                         <div class="personal-icon">
-                            <img src="../../assets/images/icon/instagram.png" alt="insta">
-                            <img src="../../assets/images/icon/facebook.png" alt="insta">
-                            <img src="../../assets/images/icon/twitter.png" alt="insta">
-                            <img src="../../assets/images/icon/whatsApp.png" alt="insta">
+                            <img src="../../assets/images/icon/instagram.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/facebook.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/twitter.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/whatsApp.png" alt="insta" class="icon-image">
                         </div>
                     </div>
                 </div>
@@ -265,10 +277,10 @@
                         <h1 class="doctor-text-heading">Sheeren Collins</h1>
                         <p class="text-note">ADMINISTRATION</p>
                         <div class="personal-icon">
-                            <img src="../../assets/images/icon/instagram.png" alt="insta">
-                            <img src="../../assets/images/icon/facebook.png" alt="insta">
-                            <img src="../../assets/images/icon/twitter.png" alt="insta">
-                            <img src="../../assets/images/icon/whatsApp.png" alt="insta">
+                            <img src="../../assets/images/icon/instagram.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/facebook.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/twitter.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/whatsApp.png" alt="insta" class="icon-image">
                         </div>
                     </div>
                 </div>
@@ -280,10 +292,10 @@
                         <h1 class="doctor-text-heading">Jennifer Mullen</h1>
                         <p class="text-note">VETERINARY</p>
                         <div class="personal-icon">
-                            <img src="../../assets/images/icon/instagram.png" alt="insta">
-                            <img src="../../assets/images/icon/facebook.png" alt="insta">
-                            <img src="../../assets/images/icon/twitter.png" alt="insta">
-                            <img src="../../assets/images/icon/whatsApp.png" alt="insta">
+                            <img src="../../assets/images/icon/instagram.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/facebook.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/twitter.png" alt="insta" class="icon-image">
+                            <img src="../../assets/images/icon/whatsApp.png" alt="insta" class="icon-image">
                         </div>
                     </div>
                 </div>
@@ -340,7 +352,7 @@
                     <div class="post-card">
                         <h1 class="tit-doctor">As a veterinarian and
                             lover of animals</h1>
-                        <p class="date-doctor">FEBRUARY 09, 2020</p>
+                        <a class="date-doctor">FEBRUARY 09, 2020</a>
                         <p class="txt-doc">Lorem Ipsum available, but the majo
                             rity have suffered alteration in some
                             words which look.</p>
@@ -354,7 +366,7 @@
                     <div class="post-card">
                         <h1 class="tit-doctor">As a veterinarian and
                             lover of animals</h1>
-                        <p class="date-doctor">FEBRUARY 10, 2020</p>
+                        <a class="date-doctor">FEBRUARY 10, 2020</a>
                         <p class="txt-doc">Lorem Ipsum available, but the majo
                             rity have suffered alteration in some
                             words which look.</p>
@@ -368,7 +380,7 @@
                     <div class="post-card">
                         <h1 class="tit-doctor">As a veterinarian and
                             lover of animals</h1>
-                        <p class="date-doctor">FEBRUARY 11, 2020</p>
+                        <a class="date-doctor">FEBRUARY 11, 2020</a>
                         <p class="txt-doc">Lorem Ipsum available, but the majo
                             rity have suffered alteration in some
                             words which look.</p>

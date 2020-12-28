@@ -20,7 +20,6 @@
             padding-bottom: 63px;
 
             .list-about {
-                flex: 50%;
                 padding-right: 80px;
 
                 .label-heading {
@@ -36,6 +35,10 @@
 
                         .list-a {
                             @include a-footer;
+
+                            &:hover {
+                                color: $background-header;
+                            }
                         }
                     }
 
@@ -54,7 +57,6 @@
             }
 
             .list-services {
-                flex: 50%; 
                 padding-right: 49px;
 
                 .services-heading {
@@ -70,6 +72,10 @@
 
                         .list-a {
                             @include a-footer;
+
+                            &:hover {
+                                color: $background-header;
+                            }
                         }
                     }
 
@@ -112,7 +118,7 @@
 
             #form-send {
                 @include flex;
-                transform: translate(-1px,-16px);
+                transform: translate(-1px,-18px);
                 max-width: 530px;
                 border: none;
 
@@ -128,6 +134,11 @@
                     width: 143px;
                     height: 90px;
                     background-color: #00bec9;
+                    
+                    &:hover {
+                        background-color: rgb(16, 120, 180);
+                        transition: 0.3s all ease-in-out;
+                    }
                 }
             }
 
@@ -135,12 +146,14 @@
                 transform: translateY(33px);
 
                 .icon-footer {
+                    cursor: pointer;
                     width: 44px;
                     height: 44px;
                     margin-right: 10px;
 
                     &:hover {
-                        cursor: pointer;
+                        animation: shake 0.2s;
+                        animation-iteration-count: infinite;
                     }
                 }
 
@@ -160,6 +173,20 @@
     }
 }
 
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate-3 rotate-1; }
+    20% { transform: translate-3 rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate0 rotate(1deg); }
+    50% { transform: translate-1 rotate-1; }
+    60% { transform: translate-3 rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate-1; }
+    80% { transform: translate-2 rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate-1 rotate-1; }
+}
+
 /*------------------responsive------------------*/
 @media only screen and (max-width: 321px) {
     #footer .footer__inner .list__title {
@@ -170,6 +197,17 @@
 @media only screen and (max-width: 425px) {
     #footer .footer__inner .list__title {
         max-width: 280px;
+    }
+}
+
+@media only screen and (max-width: 488px) {
+    #footer .footer__inner .list__footer {
+        justify-content: center;
+        padding: 20px 0;
+
+        .list-about {
+            transform: translateY(-91px);
+        }
     }
 }
 
@@ -185,8 +223,8 @@
         }
 
         .list__footer {
+            flex-wrap: wrap;
             .list-about {
-                transform: translateY(-80px);
                 @include flex-column;
                 justify-content: space-between;
 
@@ -209,7 +247,7 @@
                 @include flex;
                 flex-direction: column;
                 text-align: center;
-
+                padding: 50px 0;
                 .services-heading {
                     font-size: 35px;
                 }
@@ -218,16 +256,6 @@
                     font-size: 20px;
                 }
             }
-        }
-    }
-}
-
-@media only screen and (max-width: 585px) {
-    #footer .footer__inner .list__footer {
-        flex-wrap: wrap;
-
-        .list-services {
-            padding: 50px 0;
         }
     }
 }
@@ -247,21 +275,6 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
-    #footer .footer__inner .list__title {
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 920px) {
-    #footer .footer__inner .list__title {
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
-
 @media only screen and (max-width: 1160px) {
     #footer {
         padding-left: 2rem;
@@ -280,6 +293,8 @@
 
             .list__footer {
                 margin:0 auto;
+                text-align: center;
+                justify-content: center;
             }
         }
     } 

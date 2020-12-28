@@ -63,7 +63,7 @@
                     border-radius: 7px;
                     border: 3px solid $background-button;
                     background-color: $background-button;
-                    transform: translate(-1px, -1px);
+                    transform: translateX(-1px);
 
                     .contact-a {
                         @include a-banner;
@@ -86,7 +86,6 @@
                     border-radius: 7px;
                     border: 3px solid $text;
                     background-color: transparent;
-
                     .service-a {
                         @include a-banner;
                     }
@@ -108,8 +107,7 @@
 
         .block__inner {
             flex-wrap: wrap-reverse;
-
-            .advert__img .img-bannerr {
+.advert__img .img-bannerr {
                 max-width: 200px;
             }
 
@@ -121,63 +119,24 @@
 }
 
 /*------------------responsive------------------*/
-@media only screen and (max-width: 385px) {
-    #banner .block__inner .banner__description .banner__button {
-        padding: 0;
-    }
-}
-
-@media only screen and (max-width: 426px) {
-    #banner {
-        min-height: 900px;
-
-        .block__inner {
-            max-width: 425px;
-            padding: 0;
-            margin: 0;
-
-            .advert__img .img-banner {
-                max-width: 210px;
-            }
-        
-        }
-
-        .banner__description {
-            width: 100%;
-            padding: 0;
-
-            .banner__button{
-                margin:0;
-                padding:0;
-
-                .btn-service {
-                    margin-top: 161px;
-                    margin-left: -216px;
-                }
-            }
-        }
-    }
-}
 
 @media only screen and (max-width: 441px) {
     #banner .block__inner .banner__description .banner__button {
         flex-wrap: wrap;
-        padding-bottom: 30px;
-        margin-left: -15px;
-    }
-}
+        justify-content: center;
+        transform: translateX(16px);
 
-@media only screen and (max-width: 562px) {
-    .advert__img .img-banner {
-        max-width: 260px;
+        .btn-service {
+            margin: 10px 0;
+            transform: translateX(0);
+        }
     }
-}
 
-@media only screen and (max-width: 675px) {
     .advert__img .img-banner {
-        width: 360px;
+        width: 260px;
     }
-}
+}    
+
 
 @media only screen and (max-width: 690px) {
     #banner .block__inner .banner__description {
@@ -192,6 +151,7 @@
         }
 
         .banner__button {
+            margin-left: -16px;
             display: flex;
             width: 100%;
             justify-content: center;
@@ -199,9 +159,24 @@
     }
 }
 
+@media only screen and (max-width: 727px) {
+    #banner .block__inner .banner__description {
+        .banner__button {
+            padding-bottom: 70px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #banner .block__inner .banner__description {
+        padding: 2rem;
+    }
+}
+
 @media only screen and (max-width: 1150px) {
     #banner {
-        height: 1100px;
+        height: 1200px;
     }
     #banner .block__inner {
         flex-wrap: wrap-reverse;

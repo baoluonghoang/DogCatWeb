@@ -35,7 +35,6 @@ function Image() {
 function Js() {
     return src(jsPath)
         .pipe(concat('index.js'))
-        .pipe(uglify())
         .pipe(gulp.dest('dist/assets/js'))
 }
 

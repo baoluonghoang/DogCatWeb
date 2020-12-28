@@ -41,14 +41,23 @@
 
             .recent__card {
                 @include flex;
+
                 .doctor-card {
                     display: block;
                     width: 360px;
+
                     .img-card {
+                        cursor: pointer;
                         width: 100%;
+
                         .img-doctor {
                             width: 100%;
                             object-fit: contain;
+                        }
+
+                        &:hover {
+                            transform: translateY(-10px);
+                            transition: 0.3s all ease-in-out;
                         }
                     }
 
@@ -56,6 +65,7 @@
                         padding: 30px;
                         text-align: left;
                         height: auto;
+                        transform: translate(-1px, -2px);
 
                         .tit-doctor {
                             display: block;
@@ -73,6 +83,10 @@
                             font-weight: $font-regular;
                             padding: 8px 0;
                             line-height: 28px;
+
+                            &:hover {
+                                color: $background;
+                            }
                         }
 
                         .txt-doc {
@@ -93,7 +107,6 @@
                             padding: 14px 0px;
 
                             &:hover {
-                                cursor: pointer;
                                 color: $background;
                             }
                         }
@@ -105,25 +118,29 @@
 }
 
 /*------------------responsive------------------*/
-@media only screen and (max-width: 321px) {
-    #recent-post .block__inner .post__description .main__title .doctor-heading .text-title {
-        font-size: 22px;
+@media only screen and (max-width: 320px) {
+    #recent-post .block__inner .post__description {
+        .main__title .doctor-heading .text-title {
+            font-size: 22px;
+        }
     }
-
 } 
+
+@media only screen and (max-width: 565px) {
+    #recent-post  {
+        padding-bottom: 0;
+    }
+}  
 
 @media only screen and (max-width: 768px) {
     #recent-post .block__inner{
-        padding: 0 2rem;
-
         .post__description {
-
             .main__title {
                 .post-title {
                     font-size: 38px;
                 }
 
-                .doctor-headin{
+                .doctor-heading {
                     .text-title {
                         font-size: 22px;
                     }
@@ -132,19 +149,26 @@
 
             .recent__card {
                 flex-wrap: wrap;
-                margin: 0 auto;
-
                 .doctor-card {
-                    width: 100%;
                     padding-bottom: 20px;
+
+                    .post-card {
+                        text-align: center;
+                    }
                 }
             }
         }
     }
 }
 
-@media only screen and (max-width: 1150px) {
-    #recent-post .block__inner .post__description .recent__card{
+
+@media only screen and (max-width: 1024px) {
+    #recent-post .block__inner .post__description .recent__card {
         flex-wrap: wrap;
+        justify-content: center;
+        
+        .doctor-card {
+            margin: 10px;
+        }
     }
 }

@@ -1,16 +1,31 @@
 <header id="header">
-    <div class="block__inner container">
+    <div class="block__inner navbar container">
         <div class="header__logo">
-            <img src="../assets/images/logo/logo.png" alt="logo" class="logo__image" />
+            <a href="/"><img src="../assets/images/logo/logo.png" alt="logo" class="logo__image" /></a>
         </div>
-        <div class="header__menu" id="header__responsive">
-            <a href="#" class="header-a" id="head1">Home</a>
-            <a href="#" class="header-a" id="head2">About</a>
-            <a href="#" class="header-a" id="head3">Service</a>
-            <a href="#" class="header-a" id="head4">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+        <div class="menu">
+            <div class="top-nav">
+                <div class="logo">
+                    <img src="../assets/images/logo/logo.png" alt="logo" class="logo__image" />
+                </div>
+                <div class="close" onclick="menuClose()">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+            <div class="header__menu" id="header__responsive">
+                <a href="#" class="header-a" id="head1">Home</a>
+                <a href="#" class="header-a" id="head2">About</a>
+                <a href="#" class="header-a" id="head3">Service</a>
+                <a href="#" class="header-a" id="head4">Contact</a>
+                <div class="header__button search-responsive">
+                    <div class="form-search">
+                        <input type="text" class="input-search" name="search" placeholder="Search..">
+                    </div>
+                    <div class="button-search">
+                        <button class="btn-search"></button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="header__button">
             <div class="form-search">
@@ -19,6 +34,9 @@
             <div class="button-search">
                 <button class="btn-search"></button>
             </div>
+        </div>
+        <div class="mini-menu" onclick="menuOpen()">
+            <i class="bx bx-menu"></i>
         </div>
     </div>
 </header>

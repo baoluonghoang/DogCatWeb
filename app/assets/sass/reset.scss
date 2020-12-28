@@ -22,6 +22,12 @@ table {
     margin: 0 auto;
 }
 
+// @media only screen and (max-width: 1150px) {
+//     .container {
+//         padding: 0 1rem;
+//     }
+// }
+
 body {
     border: 0;
     margin: 0 auto;
@@ -48,4 +54,9 @@ ul{
             text-decoration: none;
         }
     }
+}
+
+button, a {
+    outline: none;
+    cursor: pointer;
 }

@@ -1,7 +1,6 @@
-@import '../partials/color';
-@import '../partials/common.scss';
-@import '../partials/font';
-
+@import "../partials/color";
+@import "../partials/common.scss";
+@import "../partials/font";
 
 #main-title {
     @include section;
@@ -19,7 +18,7 @@
             text-align: center;
             color: $text;
 
-            .main__title {   
+            .main__title {
                 .main-title {
                     letter-spacing: 4px;
                     margin-left: 8px;
@@ -28,7 +27,7 @@
                     padding-top: 5px;
                 }
 
-                .main-heading  {
+                .main-heading {
                     padding: 37px 0 92px;
 
                     .text-title {
@@ -43,13 +42,20 @@
                 @include flex;
 
                 .card {
+                    cursor: pointer;
                     display: block;
                     width: 341px;
+
                     .img-card {
                         width: 100%;
                         .img-doctor {
                             width: 100%;
                             object-fit: contain;
+                        }
+
+                        &:hover {
+                            transform: scale(0.96);
+                            transition: 0.3s all ease-in-out;
                         }
                     }
 
@@ -78,19 +84,22 @@
 /*sub-title*/
 
 .text-card {
-    .money-card{
+    @include flex-column;
+    .money-card {
         padding: 35px 36px 27px;
         color: $text;
         font-size: 42px;
         font-weight: $font-semiBold;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
 
         .price-heading {
             text-decoration-line: line-through;
+            padding-left: 14px;
+            padding-right: 43px;
         }
-    
+
         .price-money {
             text-decoration: none;
         }
@@ -102,11 +111,13 @@
         width: 199px;
         height: 60px;
         border-radius: 30px;
+        color: $text;
+        cursor: pointer;
         @include input-button;
+        margin: 0 auto;
 
         &:hover {
-            cursor: pointer;
-            color: #ffffff;
+            transform: translateY(-5px);
             transition: 0.5s all ease-in-out;
         }
     }
@@ -119,8 +130,19 @@
     }
 }
 
-
 /*------------------responsive------------------*/
+@media only screen and (max-width: 320px) {
+    #main-title .block__inner {
+        .main__description {
+            .main__card {
+                .card {
+                    width: 500px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 426px) {
     #main-title .block__inner .main__description .main__title .main-heading .text-title {
@@ -135,41 +157,61 @@
         font-size: 25px;
         width: 150px;
     }
+}
 
-} 
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     #main-title .block__inner {
-        padding: 0 2rem;
-
         .main__description {
-
-            .main__title {
-                
-                .main-title {
-                    font-size: 31px;
-                }
-            
-                .main-heading {
-                    font-size: 22px;
+            .main__card {
+                width: 320px;
+                .card {
+                    width: 320px;
+                    padding-bottom: 20px;
                 }
             }
+        }
+    }
+}
 
-            .main__card{
-                flex-wrap: wrap;
-                margin: 0 auto;
+@media only screen and (max-width: 768px) {
+    #main-title {
+        padding-bottom: 20px;
+        .block__inner {
+            .main__description {
+                .main__title {
+                    .main-title {
+                        font-size: 31px;
+                    }
 
-                .card {
-                width: 100%;
-                padding-bottom: 20px;
+                    .main-heading {
+                        .text-title {
+                            font-size: 22px;
+                        }
+                    }
                 }
-            } 
+
+                .main__card {
+                    flex-wrap: wrap;
+                    margin: 0 auto;
+                    justify-content: center;
+
+                    .card {
+                        width: 350px;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
         }
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    #main-title .block__inner .main__description .main__card{
+    #main-title .block__inner .main__description .main__card {
         flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            margin: 10px;
+        }
     }
 }
